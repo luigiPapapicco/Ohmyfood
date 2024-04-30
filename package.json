@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfoood",
+  "version": "1.0.0",
+  "description": "Projet n°4 OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luigiPapapicco/Openclassrooms_projet_04.git"
+  },
+  "author": "Luigi PAPAPICCO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luigiPapapicco/Openclassrooms_projet_04/issues"
+  },
+  "homepage": "https://github.com/luigiPapapicco/Openclassrooms_projet_04#readme",
+  "devDependencies": {
+    "sass": "^1.75.0"
+  }
+}
