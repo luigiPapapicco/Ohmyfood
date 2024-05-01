@@ -1,6 +1,6 @@
 .btn {
     height: 3.125rem;
-    border-radius: 1.563rem;
+    border-radius: 1.5625rem;
     padding: 0 1.5rem;
     font-weight: 700;
     border-style: none;
@@ -19,7 +19,7 @@
 
     &::after {
         content: "";
-        border-radius: 25px;
+        border-radius: 1.5625rem;
         position: absolute;
         top: 0;
         bottom: 0;

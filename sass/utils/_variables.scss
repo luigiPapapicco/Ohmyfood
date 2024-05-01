@@ -18,6 +18,7 @@ $clr-grey02: #353535;
 $clr-primary: #9356DC;
 $clr-secondary: #FF79DA;
 $clr-tertiary: #99E2D0;
+$clr-txt-tertiary: #008766;
 $clr-icon-functioning: #7E7E7E;
 
 // gradient
@@ -25,10 +26,9 @@ $gradien-color: linear-gradient(to bottom, $clr-secondary, $clr-primary);
 $gradien-color-lighten: linear-gradient(to bottom, lighten($clr-secondary, 8%), lighten($clr-primary, 8%));
 
 //margin
-$margin: 1.063rem;  /* 17px */
-
+$margin: 1.0625rem;
 
 
 // font size
-$title: 1.5rem; /* 24px */
-$subtitle: 1.125rem /* 18px */ 
+$title: 1.5rem;
+$subtitle: 1.125rem;
