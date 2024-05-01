@@ -1,0 +1,50 @@
+.litleCard {
+    height: 4.5rem;
+    @include flexJustAliCtr;
+    flex-direction: row;
+    background-color: $clr-background;
+    border-radius: 0.938rem;
+    gap: 1.25rem;
+    margin-left: 2rem;
+    margin-right: 1.25rem;
+    position: relative;
+    box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.2); 
+
+    @media (min-width: 1440px) {
+        min-width: 335px;
+        margin: 0;
+    }
+
+    &__numberPosition {
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+        background-color: $clr-primary;
+        color: white;
+        @include flexJustAliCtr;
+        position: absolute;
+        left: -12px;
+        }
+
+    &__icon {
+        height: 18.39px;
+        width: 18.39px;
+        color: $clr-icon-functioning;
+        bottom: 0.125rem;
+        // position: relative;
+
+        &--color {
+            height: 18.39px;
+            width: 18.39px;
+            color: $clr-primary;
+        }
+    }
+
+    &__txt {
+        font-size: 1rem;
+        font-weight: 500;
+        width: 180px;
+    }
+    
+
+}

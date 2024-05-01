@@ -1,0 +1,115 @@
+/*********** header ***********/
+.header {
+
+    .logo {
+        & > a {
+            display: none;
+        }
+    }
+}
+
+/*********** main ***********/
+/*********** search bar ***********/
+.form {
+    width: 100%;
+    height: 3.125rem;
+    @include flexJustAliCtr;
+    gap: 0.938rem;
+    background: linear-gradient(#bdbdbd, #eaeaea 7%);
+    box-shadow: $shadow-position-y;
+    position: relative;
+    &__icon {
+        color: $clr-grey02;
+    }
+    &__subtitle {
+        font-size: 1rem;
+        font-weight: 500;
+        color: $clr-grey02;
+    }
+}
+
+/*********** intro ***********/
+.intro {
+    width: 100%;
+    height: 17.875rem;
+    background: $clr-background;
+    text-align: center;
+    @include flexJustAliCtr;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    @media (min-width: 1440px) {
+        height: 14.938rem;
+    }
+
+    & > * {
+        margin: 0 $margin;
+    }
+
+    &__title {
+        margin: 0 2.7rem;
+        font-size: $title;
+        font-weight: 900;
+        
+
+        @media (min-width: 1440px) {
+           font-size: 2.5rem;
+        }
+    }
+    
+    &__subtitle {
+        font-size: $subtitle;
+        font-weight: 300;
+        color: $clr-grey02;
+    }
+    
+    & > .btn {
+        font-weight: 500;
+    }
+
+}
+
+/*********** functioning ***********/
+.functioning {
+    width: 100%;
+    height: 27.5rem;
+    @include flexColumn;
+    justify-content: space-evenly;
+
+    @media (min-width: 1440px) {
+        height: auto;
+        align-items: center;
+    }
+
+    .container {
+
+        @media (min-width: 1440px) {
+            padding: 50px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 1080px;
+        }
+
+        &__title {
+            font-size: $title;
+            margin-bottom: 2.188rem;
+            margin-left: 1.25rem;
+
+            @media (min-width: 1440px) {
+                margin: 0;
+            }
+        }
+
+        &__litleCards {
+            @include flexColumn;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+
+            @media (min-width: 1440px) {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+    }
+}

@@ -4,7 +4,7 @@
   "description": "Projet n°4 OpenClassrooms",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass sass/main.scss css/main.css  --watch"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/luigiPapapicco/Openclassrooms_projet_04#readme",
   "devDependencies": {
     "sass": "^1.75.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }
