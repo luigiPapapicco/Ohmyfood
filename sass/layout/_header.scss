@@ -3,7 +3,7 @@
     height: 3.375rem;
     @include flexJustAliCtr; 
 
-    &__link {
+    & > a {
         height: 1.875rem;
         width: 1.875rem;
         position: absolute;
@@ -16,13 +16,14 @@
             height: 1rem;
         }
     }
-
+    
     &__img {
         width: 10.125rem;
 
         @media (min-width: 1440px) {
             width: 12.5rem;
             }
+        }
 
-    }
+
 }

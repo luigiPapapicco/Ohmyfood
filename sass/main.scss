@@ -3,7 +3,8 @@
 @import 'utils/mixins';
 
 // import normalize
-@import 'base/normalize';
+@import 'base/base.scss';
+@import 'base/typography';
 
 // import components
 @import 'components/buttons';
@@ -16,4 +17,5 @@
 @import 'layout/menu';
 
 // import pages
-@import 'pages/style.scss'
+@import 'pages/style';
+@import 'pages/restaurants';
