@@ -9,6 +9,18 @@
     flex-direction: column;
 }
 
+
+@mixin card {
+    // height: 4.3125rem;
+    width: 100%;
+    background: white;
+    border-radius: .9375rem;
+    @include flexColumn;
+    cursor: pointer;
+    position: relative;
+        // margin: 0 $margin;
+}
+
 // @mixin flexRow {
 //     display: flex;
 //     flex-direction: row;

@@ -1,0 +1,120 @@
+/* Restaurants */
+
+.main {
+    width: 100%;
+    @include flexColumn;
+    justify-content: center;
+
+    @media (min-width: 1055px) {
+        align-items: center;
+        }
+    
+    &__img {
+        width: 100%;
+        height: 17.1875rem;
+    }
+    
+    &__menu {
+        max-width: 1055px;
+        background-color: $clr-background;
+        padding-top: 1.25rem;
+        border-radius: 2.5rem 2.5rem 0 0;
+        margin-top: -2.8125rem;
+    
+        @media (min-width: 1055px) {
+        width: 1055px;
+        }
+    }
+
+    .container {
+        margin: 0 $margin;
+        @include flexColumn;
+        gap: 2.5rem;
+
+        &__content {
+            display: flex;
+            // justify-content: flex-start;
+            // align-items: center;
+            gap: 1.25rem;
+            
+            @media (min-width: 1055px) {
+                justify-content: center;
+                } 
+
+            & > h1 {
+                font-size: 1.75rem;
+                font-weight: lighter;
+                font-family: $txt-shrikhand;
+                color: $clr-txt-title;
+            }
+        }
+
+        .menu {
+            @include flexColumn;
+            justify-content: space-between;
+            gap: .75rem;
+
+            & > h2 {
+                font-size: 1rem;
+                font-weight: 300;
+                margin-bottom: .75rem;
+
+                & .border {
+                    border-bottom: .1875rem solid $clr-tertiary;
+                    padding-bottom: .4375rem;
+                }
+            }
+
+            .card {
+                box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.1);
+                display: flex;
+                flex-direction: row;
+
+                &__content {
+                    @include flexColumn;
+                    width: 100%;
+                    height: 100%;
+                    padding: .8125rem;
+                    overflow: hidden;
+
+                    & > * {
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+
+                    & > h3 {
+                        font-size: 1.125rem;
+                        font-weight: 500;
+                    }
+
+                    & > p {
+                        font-size: .94rem;
+                        font-weight: 300;
+                    }
+                }
+
+                .price {
+                    font-size: .94rem;
+                    font-weight: bold;
+                    color: $clr-grey02;
+                    width: 3.6875rem;
+                    height: 4.3125rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: end;
+                    padding-bottom: .9375rem;
+                }    
+            }
+        }
+        .order {
+            display: flex;
+            justify-content: center;
+
+            &__btn {
+                padding: 0 2.5rem;
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+}
