@@ -25,7 +25,6 @@
         width: 1055px;
         }
     }
-
     .container {
         margin: 0 $margin;
         @include flexColumn;
@@ -33,9 +32,15 @@
 
         &__content {
             display: flex;
-            // justify-content: flex-start;
-            // align-items: center;
+            justify-content: flex-start;
+            align-items: center;
             gap: 1.25rem;
+
+            .checkbox-heart {
+                position: relative;
+                right: 0;
+                bottom: 0;
+            }
             
             @media (min-width: 1055px) {
                 justify-content: center;
@@ -65,48 +70,74 @@
                 }
             }
 
-            .card {
-                box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.1);
+            .box {
+                border-radius: 15px;
                 display: flex;
                 flex-direction: row;
-
-                &__content {
-                    @include flexColumn;
-                    width: 100%;
-                    height: 100%;
-                    padding: .8125rem;
-                    overflow: hidden;
-
-                    & > * {
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                        white-space: nowrap;
-                    }
-
-                    & > h3 {
-                        font-size: 1.125rem;
-                        font-weight: 500;
-                    }
-
-                    & > p {
-                        font-size: .94rem;
-                        font-weight: 300;
-                    }
+                overflow: hidden;
+                box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.1);
+                
+                &:hover .progressBar {
+                    margin-right: 0px;
                 }
 
-                .price {
-                    font-size: .94rem;
-                    font-weight: bold;
-                    color: $clr-grey02;
-                    width: 3.6875rem;
-                    height: 4.3125rem;
+                .card {
+                    display: flex;
+                    flex-direction: row;
+    
+                    &__content {
+                        @include flexColumn;
+                        width: 100%;
+                        height: 100%;
+                        padding: .8125rem;
+                        overflow: hidden;
+    
+                        & > * {
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+    
+                        & > h3 {
+                            font-size: 1.125rem;
+                            font-weight: 500;
+                        }
+    
+                        & > p {
+                            font-size: .94rem;
+                            font-weight: 300;
+                        }
+                    }
+    
+                    .price {
+                        font-size: .94rem;
+                        font-weight: bold;
+                        color: $clr-grey02;
+                        width: 3.6875rem;
+                        height: 4.3125rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: end;
+                        padding-bottom: .9375rem;
+                    }
+
+                }
+                .progressBar {
+                    background-color: $clr-tertiary;
+                    width: 59px;
+                    height: 69px;
+                    color: white;
                     display: flex;
                     justify-content: center;
-                    align-items: end;
-                    padding-bottom: .9375rem;
-                }    
+                    align-items: center;
+                    border-radius: 0 15px 15px 0;
+                    margin-right: -60px;
+                    transition: 250ms ease-in-out;
+                    flex-shrink: 0;
+                }
             }
         }
+
         .order {
             display: flex;
             justify-content: center;

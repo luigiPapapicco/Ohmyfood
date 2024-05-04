@@ -1,0 +1,46 @@
+/* checkbox fav */ 
+.checked {
+    background: $gradien-color;
+    color: transparent;
+    -webkit-background-clip: text;
+    opacity: 0;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.unchecked {
+    color: #000;
+    font: var(--fa-font-regular);
+    font-size: 1.375rem;
+}
+
+.checked,
+.unchecked {
+
+    font-size: 1.375rem;
+
+}
+
+.checkbox-heart {
+    position: absolute;
+    right: 1.5625rem;
+    bottom: 1.5625rem;
+    
+}
+
+.checkbox-heart input[type='checkbox'],
+.checkbox-heart .checked {
+    display: none;
+    
+
+}
+
+// .checkbox-heart input[type='checkbox']:checked~.checked {
+//     display: inline-block;
+// }
+
+// .checkbox-heart input[type='checkbox']:checked~.unchecked {
+//     display: none;
+// }
+
