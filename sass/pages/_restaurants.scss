@@ -1,6 +1,7 @@
 /* Restaurants */
 
 .main {
+    animation: mainAnim 1000ms both;
     width: 100%;
     @include flexColumn;
     justify-content: center;
@@ -36,9 +37,8 @@
             align-items: center;
             gap: 1.25rem;
 
-            .checkbox-heart {
+            .fav-bar {
                 position: relative;
-                right: 0;
                 bottom: 0;
             }
             
@@ -54,7 +54,11 @@
             }
         }
 
-        .menu {
+
+
+        .menu1,
+        .menu2,
+        .menu3 {
             @include flexColumn;
             justify-content: space-between;
             gap: .75rem;
@@ -63,6 +67,7 @@
                 font-size: 1rem;
                 font-weight: 300;
                 margin-bottom: .75rem;
+                animation: spanAnime 2200ms both;
 
                 & .border {
                     border-bottom: .1875rem solid $clr-tertiary;
@@ -84,6 +89,7 @@
                 .card {
                     display: flex;
                     flex-direction: row;
+                    transform: none;
     
                     &__content {
                         @include flexColumn;
@@ -149,3 +155,82 @@
         }
     }
 }
+
+// animation with key frame
+
+@keyframes mainAnim {
+    0% {
+        transform: translateY(50px);
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes boxanime {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes spanAnime {
+    0% {
+        transform: translateX(250px);
+        opacity: 0;
+    }
+
+    10%, 99% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.menu1 {
+    .box:nth-child(2) {
+        animation: boxanime 1500ms both;
+    }
+    .box:nth-child(3) {
+        animation: boxanime 1500ms 300ms both;
+    }
+    .box:nth-child(4) {
+        animation: boxanime 1500ms 600ms both;
+    }
+    .box:nth-child(5) {
+        animation: boxanime 1500ms 900ms both;
+    }
+}
+
+.menu2 {
+    .box:nth-child(2) {
+        animation: boxanime 1500ms both;
+    }
+    .box:nth-child(3) {
+        animation: boxanime 1500ms 300ms both;
+    }
+    .box:nth-child(4) {
+        animation: boxanime 1500ms 600ms both;
+    }
+}
+
+.menu3 {
+    .box:nth-child(2) {
+        animation: boxanime 1500ms both;
+    }
+    .box:nth-child(3) {
+        animation: boxanime 1500ms 300ms both;
+    }
+    .box:nth-child(4) {
+        animation: boxanime 1500ms 600ms both;
+    }
+}
+

@@ -1,4 +1,8 @@
 /* Card */
 .card {
     @include card;
+    transition: transform 200ms ease-in-out;
+    &:hover {
+        transform: scale(1.03);
+    }
 }
