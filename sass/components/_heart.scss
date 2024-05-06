@@ -1,3 +1,4 @@
+// animation basique avec un :hover
 .fav-bar {
     position: absolute;
     bottom: 15px;
@@ -26,7 +27,7 @@
 
 
 
-// essai avec une tcheckbox
+// essai avec une tcheckbox et des keyframe
 .box-fav {
     position: absolute;
     bottom: 15px;
@@ -37,9 +38,8 @@
     font: var(--fa-font-regular);
     content: "\f004";
     font-size: 1.375rem;
-    // animation: test 1000ms both;
     opacity: 1;
-    animation: test1 700ms both;
+
 }
 
 .label-fav::after {
@@ -50,8 +50,8 @@
     color: transparent;
     -webkit-background-clip: text;
     display: none; // Initialisation cachée
+    }
 
-}
 
 #input-fav[type="checkbox"] {
     display: none; // Cacher la case à cocher par défaut
@@ -60,32 +60,35 @@
 
 #input-fav[type="checkbox"]:checked + .label-fav::before {
     display: none; // Cacher l'icône par défaut lorsque la case est cochée
-
-}
+    }
 
 #input-fav[type="checkbox"]:checked + .label-fav::after {
     display: inline-block; // Afficher l'icône solide lorsque la case est cochée
-    animation: test 1000ms both;
-}
+    animation: crossfade 800ms both;
 
-@keyframes test {
+    
+    }
+
+#input-fav[type="checkbox"]:not(checked) + .label-fav::before {
+    display: inline-block; // Afficher l'icône solide lorsque la case est cochée
+
+    animation: crossfade 800ms both;
+    }
+
+
+@keyframes crossfade {
     0% {
         opacity: 0;
+        transform: scale(1);
+        transform-origin: center;
+    }
+
+    50% {
+        transform: scale(1.2);
     }
     100% {
         opacity: 1;
+        transform: scale(1);
+        transform-origin: center;
     }    
-}
-
-@keyframes test1 {
-    0% {
-        opacity: 1;
-    }
-    30% {
-        opacity: 0.2;
-    }    
-
-    70%, 100% {
-        opacity: 1;
-    }
 }
