@@ -1,10 +1,12 @@
 /* Restaurants */
 
-.main {
-    animation: mainAnim 1000ms both;
+.main-restaurant {
+    // animation: mainAnim 1000ms both;
     width: 100%;
+    @include hidden-text;
     @include flexColumn;
     justify-content: center;
+    animation: main-restaurant 1500ms both;
 
     @media (min-width: 1055px) {
         align-items: center;
@@ -12,7 +14,7 @@
     
     &__img {
         width: 100%;
-        height: 17.1875rem;
+        height: 275px;
     }
     
     &__menu {
@@ -37,9 +39,10 @@
             align-items: center;
             gap: 1.25rem;
 
-            .fav-bar {
+            .box-fav {
                 position: relative;
-                bottom: 0;
+                bottom: -0.125rem;
+                right: 0;
             }
             
             @media (min-width: 1055px) {
@@ -47,14 +50,14 @@
                 } 
 
             & > h1 {
+                @include hidden-text;
                 font-size: 1.75rem;
                 font-weight: lighter;
                 font-family: $txt-shrikhand;
                 color: $clr-txt-title;
+                
             }
         }
-
-
 
         .menu1,
         .menu2,
@@ -63,11 +66,20 @@
             justify-content: space-between;
             gap: .75rem;
 
+            // setup of the card animation for the menu
+            @for $i from 1 through 5 {
+                .box:nth-child(#{$i}) {
+                    animation: little-card 1000ms $box-delay both;
+                }
+                $box-delay: $box-delay + 200ms;
+            }
+
             & > h2 {
                 font-size: 1rem;
                 font-weight: 300;
                 margin-bottom: .75rem;
-                animation: spanAnime 2200ms both;
+                // span animation
+                animation: span-anim 1600ms ease-in-out both;
 
                 & .border {
                     border-bottom: .1875rem solid $clr-tertiary;
@@ -99,9 +111,7 @@
                         overflow: hidden;
     
                         & > * {
-                            text-overflow: ellipsis;
-                            overflow: hidden;
-                            white-space: nowrap;
+                            @include hidden-text;
                         }
     
                         & > h3 {
@@ -130,14 +140,14 @@
                 }
                 .progressBar {
                     background-color: $clr-tertiary;
-                    width: 59px;
-                    height: 69px;
+                    width: 3.6875rem;
+                    height: 4.3125rem;
                     color: white;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border-radius: 0 15px 15px 0;
-                    margin-right: -60px;
+                    border-radius: 0 .9375rem .9375rem 0;
+                    margin-right: -3.75rem;
                     transition: 250ms ease-in-out;
                     flex-shrink: 0;
                 }
@@ -155,82 +165,3 @@
         }
     }
 }
-
-// animation with key frame
-
-@keyframes mainAnim {
-    0% {
-        transform: translateY(50px);
-        opacity: 0
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes boxanime {
-    0% {
-        transform: translateX(-200px);
-        opacity: 0
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes spanAnime {
-    0% {
-        transform: translateX(250px);
-        opacity: 0;
-    }
-
-    10%, 99% {
-        opacity: .5;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-.menu1 {
-    .box:nth-child(2) {
-        animation: boxanime 1500ms both;
-    }
-    .box:nth-child(3) {
-        animation: boxanime 1500ms 300ms both;
-    }
-    .box:nth-child(4) {
-        animation: boxanime 1500ms 600ms both;
-    }
-    .box:nth-child(5) {
-        animation: boxanime 1500ms 900ms both;
-    }
-}
-
-.menu2 {
-    .box:nth-child(2) {
-        animation: boxanime 1500ms both;
-    }
-    .box:nth-child(3) {
-        animation: boxanime 1500ms 300ms both;
-    }
-    .box:nth-child(4) {
-        animation: boxanime 1500ms 600ms both;
-    }
-}
-
-.menu3 {
-    .box:nth-child(2) {
-        animation: boxanime 1500ms both;
-    }
-    .box:nth-child(3) {
-        animation: boxanime 1500ms 300ms both;
-    }
-    .box:nth-child(4) {
-        animation: boxanime 1500ms 600ms both;
-    }
-}
-

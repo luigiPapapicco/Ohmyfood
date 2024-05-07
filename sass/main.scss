@@ -1,6 +1,7 @@
 // importe tools
 @import 'utils/variables';
 @import 'utils/mixins';
+@import 'utils/keyframes';
 
 // import normalize
 @import 'base/base.scss';
@@ -11,7 +12,6 @@
 @import 'components/littleCard';
 @import 'components/card';
 @import 'components/heart';
-@import 'components/test';
 
 // import layout
 @import 'layout/loader';

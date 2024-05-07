@@ -1,10 +1,17 @@
+// crossfade for loader
+.main-index,
+.header-index,
+.footer-index {
+    animation: transition-loader 2s ease backwards;
+}
+
 /*********** main ***********/
 /*********** search bar ***********/
 .form {
     width: 100%;
     height: 3.125rem;
     @include flexJustAliCtr;
-    gap: 0.5375rem;
+    gap: .5375rem;
     background: linear-gradient(#bdbdbd, #eaeaea 7%);
     box-shadow: $shadow-position-y;
     position: relative;
@@ -24,8 +31,6 @@
     ::-webkit-input-placeholder {
         color: $clr-grey02;
     }
-
-
 }
 
 /*********** intro ***********/

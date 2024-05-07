@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 1.25rem;
+    position: relative;
 
 
     @media (min-width: 1055px) {
@@ -19,7 +20,7 @@
 
     &__title {
         font-family: $txt-shrikhand;
-        font-size: 19px;
+        font-size: 1.1875rem;
         color: white;
         font-weight: 100;
         width: 8.6875rem;

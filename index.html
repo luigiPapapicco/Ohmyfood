@@ -28,25 +28,23 @@
     </div>
 
     <!-- header -->
-    <header class="header">
+    <header class="header-index">
         <div class="logo">
             <img class="logo__img" src="images/logo/ohmyfood.png" alt="logo du site ohmyfood">
         </div>
     </header>
 
-    <main>
+    <main class="main-index">
         <!-- search bar -->
-
         <form class="form">
             <i class="form__icon fa-solid fa-location-dot"></i>
             <input class="form__input" type="search" name="search" placeholder="Paris, Belleville">
-            <!-- <p class="form__subtitle">Paris, Belleville</p> -->
         </form>
         <!-- intro -->
         <section class="intro">
             <h1 class="intro__title">Réservez le menu qui vous convient</h1>
             <p class="intro__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <a href="#restaurants_anchor" class="btn">Explorer nos restaurants</a>
+            <a href="#restaurants-anchor" class="btn">Explorer nos restaurants</a>
         </section>
 
         <!-- functioning -->
@@ -82,7 +80,7 @@
             </div>
         </section>
         <!-- restaurants -->
-        <section id="restaurants_anchor" class="restaurants">
+        <section id="restaurants-anchor" class="restaurants">
             <div class="cards">
                 <h2 class="cards__title column">Restaurants</h2>
                 <!-- column -->
@@ -99,11 +97,10 @@
                                 <p>Ménilmontant</p>
                             </div>
                         </a>
-                        <form action="/" method="get" class="box-fav">
-                            <input type="checkbox" name="like" id="input-fav">
-                            <label for="input-fav" class="label-fav">
-                                
-                            </label>
+                        <!-- chebox fav -->
+                        <form action="#" method="get" class="box-fav">
+                            <input type="checkbox" name="like" id="input-fav1">
+                            <label for="input-fav1" class="label-fav1"></label>
                         </form>
 
                     </article>
@@ -120,10 +117,11 @@
                                 <p>Charonne</p>
                             </div>
                         </a>
-                        <div class="fav-bar">
-                            <i class="fa-regular fa-heart unchecked"></i>
-                            <i class="fa-solid fa-heart checked"></i>
-                        </div>
+                        <!-- chebox fav -->
+                        <form action="#" method="get" class="box-fav">
+                            <input type="checkbox" name="like" id="input-fav2" checked>
+                            <label for="input-fav2" class="label-fav2"></label>
+                        </form>
                     </article>
                 </div>
                 <!-- column -->
@@ -139,10 +137,11 @@
                                 <p>Cité Rouge</p>
                             </div>
                         </a>
-                        <div class="fav-bar">
-                            <i class="fa-regular fa-heart unchecked"></i>
-                            <i class="fa-solid fa-heart checked"></i>
-                        </div>
+                        <!-- chebox fav -->
+                        <form action="#" method="get" class="box-fav">
+                            <input type="checkbox" name="like" id="input-fav3">
+                            <label for="input-fav3" class="label-fav3"></label>
+                        </form>
                     </article>
 
                     <!-- restaurant 04 -->
@@ -156,10 +155,11 @@
                                 <p>Folie-Méricourt</p>
                             </div>
                         </a>
-                        <div class="fav-bar">
-                            <i class="fa-regular fa-heart unchecked"></i>
-                            <i class="fa-solid fa-heart checked"></i>
-                        </div>
+                        <!-- chebox fav -->
+                        <form action="#" method="get" class="box-fav">
+                            <input type="checkbox" name="like" id="input-fav4">
+                            <label for="input-fav4" class="label-fav4"></label>
+                        </form>
                     </article>
                 </div>
             </div>
@@ -167,7 +167,7 @@
     </main>
 
     <!-- footer  -->
-    <footer class="footer">
+    <footer class="footer footer-index">
         <h2 class="footer__title">ohmyfood</h2>
         <ul class="footer__list">
             <li>
