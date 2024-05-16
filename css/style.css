@@ -263,7 +263,6 @@ body {
 
 #input-fav1[type=checkbox]:checked + .label-fav1::before {
   display: none;
-  animation: heart-status 400ms;
 }
 
 #input-fav1[type=checkbox]:checked + .label-fav1::after {
@@ -298,7 +297,6 @@ body {
 
 #input-fav2[type=checkbox]:checked + .label-fav2::before {
   display: none;
-  animation: heart-status 400ms;
 }
 
 #input-fav2[type=checkbox]:checked + .label-fav2::after {
@@ -333,7 +331,6 @@ body {
 
 #input-fav3[type=checkbox]:checked + .label-fav3::before {
   display: none;
-  animation: heart-status 400ms;
 }
 
 #input-fav3[type=checkbox]:checked + .label-fav3::after {
@@ -368,7 +365,6 @@ body {
 
 #input-fav4[type=checkbox]:checked + .label-fav4::before {
   display: none;
-  animation: heart-status 400ms;
 }
 
 #input-fav4[type=checkbox]:checked + .label-fav4::after {

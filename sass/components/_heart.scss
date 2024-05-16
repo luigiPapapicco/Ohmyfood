@@ -13,7 +13,7 @@
         content: "\f004";
         font-size: 1.375rem;
     } 
-    
+
     // init checked icon
     .label-fav#{$i}::after {
         font: var(--fa-font-solid);
@@ -25,13 +25,12 @@
         display: none; // Initialisation cachée
         }
 
-      #input-fav#{$i}[type="checkbox"] {
+    #input-fav#{$i}[type="checkbox"] {
         display: none; // Cacher la case de la checkbox par défaut
     }
 
     #input-fav#{$i}[type="checkbox"]:checked + .label-fav#{$i}::before {
         display: none; // Cacher l'icône par défaut lorsque la case est cochée
-        animation: heart-status 400ms;
     }
     #input-fav#{$i}[type="checkbox"]:checked + .label-fav#{$i}::after {
         display: inline-block; // Afficher l'icône solide lorsque la case est cochée
