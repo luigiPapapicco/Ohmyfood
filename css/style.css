@@ -4,7 +4,6 @@
   0% {
     opacity: 0;
     transform: scale(1);
-    transform-origin: center;
   }
   50% {
     transform: scale(1.3);
@@ -12,7 +11,6 @@
   100% {
     opacity: 1;
     transform: scale(1);
-    transform-origin: center;
   }
 }
 @keyframes little-card {
@@ -247,7 +245,6 @@ body {
   font: var(--fa-font-regular);
   content: "\f004";
   font-size: 1.375rem;
-  animation: heart-status 60ms 3 reverse;
 }
 
 .label-fav1::after {
@@ -266,6 +263,7 @@ body {
 
 #input-fav1[type=checkbox]:checked + .label-fav1::before {
   display: none;
+  animation: heart-status 400ms;
 }
 
 #input-fav1[type=checkbox]:checked + .label-fav1::after {
@@ -273,11 +271,15 @@ body {
   animation: heart-status 400ms;
 }
 
+#input-fav1[type=checkbox]:not(:checked) + .label-fav1::before {
+  display: inline-block;
+  animation: heart-status 100ms 2;
+}
+
 .label-fav2::before {
   font: var(--fa-font-regular);
   content: "\f004";
   font-size: 1.375rem;
-  animation: heart-status 60ms 3 reverse;
 }
 
 .label-fav2::after {
@@ -296,6 +298,7 @@ body {
 
 #input-fav2[type=checkbox]:checked + .label-fav2::before {
   display: none;
+  animation: heart-status 400ms;
 }
 
 #input-fav2[type=checkbox]:checked + .label-fav2::after {
@@ -303,11 +306,15 @@ body {
   animation: heart-status 400ms;
 }
 
+#input-fav2[type=checkbox]:not(:checked) + .label-fav2::before {
+  display: inline-block;
+  animation: heart-status 100ms 2;
+}
+
 .label-fav3::before {
   font: var(--fa-font-regular);
   content: "\f004";
   font-size: 1.375rem;
-  animation: heart-status 60ms 3 reverse;
 }
 
 .label-fav3::after {
@@ -326,6 +333,7 @@ body {
 
 #input-fav3[type=checkbox]:checked + .label-fav3::before {
   display: none;
+  animation: heart-status 400ms;
 }
 
 #input-fav3[type=checkbox]:checked + .label-fav3::after {
@@ -333,11 +341,15 @@ body {
   animation: heart-status 400ms;
 }
 
+#input-fav3[type=checkbox]:not(:checked) + .label-fav3::before {
+  display: inline-block;
+  animation: heart-status 100ms 2;
+}
+
 .label-fav4::before {
   font: var(--fa-font-regular);
   content: "\f004";
   font-size: 1.375rem;
-  animation: heart-status 60ms 3 reverse;
 }
 
 .label-fav4::after {
@@ -356,11 +368,17 @@ body {
 
 #input-fav4[type=checkbox]:checked + .label-fav4::before {
   display: none;
+  animation: heart-status 400ms;
 }
 
 #input-fav4[type=checkbox]:checked + .label-fav4::after {
   display: inline-block;
   animation: heart-status 400ms;
+}
+
+#input-fav4[type=checkbox]:not(:checked) + .label-fav4::before {
+  display: inline-block;
+  animation: heart-status 100ms 2;
 }
 
 .loader {
@@ -748,7 +766,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  animation: main-restaurant 1500ms both;
+  animation: main-restaurant 1500ms;
 }
 @media (min-width: 1055px) {
   .main-restaurant {
