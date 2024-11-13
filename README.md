@@ -14,9 +14,9 @@ Naviguez  dans les differentes pages du site Web en utilisant la barre de naviga
 
 ## Technologie utilisees
 
-- HTML
-- CSS
-- SASS
+| <img src="readme_files/html.svg" alt="logo html" width="100" height="100">  | <img src="readme_files/css.svg" alt="logo css" width="100" height="100">  | <img src="readme_files/sass.svg" alt="logo css" width="100" height="100"> |
+|:---------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|:--------------------------------------------------------------------------:|
+| HTML                                                                        | CSS                                                                       | SCSS                                                                       |
 
 ## Structure du projet
 
