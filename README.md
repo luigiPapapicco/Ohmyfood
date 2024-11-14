@@ -1,6 +1,6 @@
 # OhMyFood
 
-<img src="readme_files/home.png" alt="screen de la page d'accueil" width="250">
+<img src="readme_files/home.png" alt="screen de la page d'accueil" width="600">
 
 
 Ohmyfood est une entreprise spécialisée dans la réservation de tables dans des restaurants gastronomiques à Paris, visant les amateurs de cuisine raffinée, connectées et souvent pressées. Elle propose des réservations rapides, des menus exclusifs créés par des chefs partenaires, et met en avant des restaurants innovants pour offrir des expériences culinaires uniques.
